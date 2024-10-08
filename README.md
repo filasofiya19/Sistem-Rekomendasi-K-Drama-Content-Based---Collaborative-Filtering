@@ -2,23 +2,27 @@
 
 ## Project Overview
 
-Perkembangan teknologi di era digital saat ini sangat pesat, dengan banyak aktivitas yang kini dapat dilakukan secara praktis dari rumah, salah satunya adalah berbelanja. Platform e-commerce telah menjadi sarana utama bagi konsumen untuk melakukan pembelian (revenue), yang pada akhirnya menciptakan persaingan ketat di antara berbagai platform dan perusahaan [Badan Pusat Statistik Indonesia](https://web-api.bps.go.id/download.php?f=5g3vWbrA+R3h1GRyjNFOdHcxNW1QNmZVS1BvK0hRdEQ3VjRLT1NZYVFOa25qb1hscXBlbWxzU3prSzJWNUpXeGJwMHY1L3lNY1V5QXZmOW11TlBSQUlhVEFjNFNScjh2aS9xL1NEZVpvRlhiV3RNT2JPU3VCQnpndkEvYmlZdHpHaGNKV0N4enNYaEpaTHB2cDdqVE13a0pYVmdETmVFeVZFN0pBU2ZNUTQwRU1UQS81MkhwMXBYd2l0dFhYS2JzY2Frd1RjNU1LYkJRZGVtQWkzcW1lR041SnVwVU02a2VCNlBwbmwyWGFmMXJhbHZpbzF5U08wdEJPWHdMMjNvY0lRdy9IOHhPeXhYalJlRmc=&_gl=1*1xp0dwg*_ga*MjAzMjcyMjU2Ni4xNjk1MzA3OTIx*_ga_XXTTVXWHDB*MTcyNzI0OTAxOS4xOC4xLjE3MjcyNTAyNzkuMC4wLjA). Untuk tetap kompetitif dan meningkatkan penjualan, perusahaan e-commerce perlu memahami perilaku dan niat pembelian pengunjung platform mereka dengan lebih baik. Dataset "Online Shoppers Purchasing Intention" yang tersedia di [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset) memberikan kesempatan untuk mendapatkan wawasan berharga tentang bagaimana pengunjung berinteraksi dengan situs e-commerce dan faktor-faktor yang mempengaruhi keputusan pembelian mereka. 
-Dengan menganalisis dan mengolah dataset "Online Shoppers Purchasing Intention", perusahaan e-commerce dapat memperoleh wawasan yang mendalam tentang perilaku pengunjung mereka, mengoptimalkan strategi pemasaran dan pengalaman pengguna, serta meningkatkan pembeli dan pendapatan perusahaan.
+K-Drama (Korean Drama) telah menjadi salah satu bentuk hiburan yang paling populer di seluruh dunia, dengan basis penggemar yang terus berkembang pesat. Popularitas K-Drama tidak hanya terbatas di Korea Selatan, tetapi juga menyebar ke berbagai negara, terutama di Asia, Eropa, dan Amerika. Menurut laporan dari Statista, jumlah pemirsa K-Drama global diperkirakan mencapai lebih dari 50 juta orang, menunjukkan peningkatan signifikan dalam permintaan akan konten K-Drama.
+Seiring dengan bertambahnya jumlah judul K-Drama yang tersedia, penonton sering kali mengalami kesulitan dalam menemukan judul baru yang sesuai dengan selera mereka. Sebuah studi oleh Yoon et al. (2021) menunjukkan bahwa sistem rekomendasi dapat meningkatkan kepuasan pengguna dengan memberikan saran konten yang relevan berdasarkan preferensi individu. Dalam konteks K-Drama, rekomendasi yang akurat dapat membantu penonton mengeksplorasi judul yang mungkin mereka nikmati tetapi tidak mereka ketahui.
+Dalam pengembangan sistem rekomendasi K-Drama ini, terdapat dua pendekatan utama yang dapat dipertimbangkan: Content-based Filtering dan Collaborative Filtering. Content-based Filtering merekomendasikan K-Drama kepada pengguna berdasarkan fitur-fitur spesifik dari judul yang telah mereka tonton sebelumnya, seperti genre, aktor, dan sinopsis. Pendekatan ini memungkinkan sistem untuk memberikan rekomendasi yang personal dan relevan, meskipun masih memiliki tantangan seperti kesulitan dalam merekomendasikan judul baru.
+Di sisi lain, Collaborative Filtering merekomendasikan K-Drama berdasarkan perilaku dan preferensi pengguna lain yang memiliki kesamaan. Meskipun pendekatan ini dapat menawarkan variasi yang lebih besar dalam rekomendasi, ia juga menghadapi masalah seperti cold start, di mana sistem memerlukan data pengguna yang cukup untuk memberikan saran yang akurat. Oleh karena itu, pendekatan Content-based Filtering dipilih untuk proyek ini, terutama mengingat keterbatasan dataset yang digunakan, yang mencakup 250 sampel dari K-Drama teratas di MyDramaList.
+Dengan memanfaatkan data dari MyDramaList, proyek ini bertujuan untuk mengembangkan sistem rekomendasi K-Drama yang dapat menyajikan saran judul berdasarkan fitur-fitur penting, sehingga meningkatkan pengalaman menonton pengguna.
 
 
 ## Business Understanding
 Berikut beberapa pernyataan masalah yang akan di selesaikan berdasarkan pemaparan latar belakang, sebagai berikut:
-- Apa faktor yang paling mempengaruhi pengunjung e-commerce dalam menghasilkan revenue?
-- Bagaimana cara membuat model machine learning yang bisa mengklasifikasikan revenue dari pengunjung situs e-commerce?
+- Bagaimana cara penonton K-Drama menemukan judul baru yang sesuai dengan preferensi mereka di tengah banyaknya pilihan yang tersedia?
+- Apa faktor utama yang mempengaruhi preferensi penonton dalam memilih K-Drama yang akan ditonton?
+- Seberapa efektif sistem rekomendasi saat ini dalam memberikan saran K-Drama yang relevan dan memuaskan bagi penonton?
 
 ### Goals
-- Mengidentifikasi Pola Pembelian 
-- Mengetahui faktor yang mempengaruhi revenue dari pengunjung e-commerce.
-- Mampu membuat model yang memiliki akurasi serta nilai ROC AUC yang tinggi untuk mengklasifikasikan revenue dari pengunjung e-commerce
+- Mengembangkan sistem rekomendasi K-Drama yang mampu memberikan saran judul yang sesuai dengan preferensi penonton.
+- Meningkatkan pengalaman menonton penonton dengan membantu mereka menemukan konten baru yang relevan dan menarik, sehingga mengurangi kesulitan dalam memilih K-Drama di tengah banyaknya pilihan yang tersedia.
+- Meningkatkan akurasi dan relevansi rekomendasi dengan memanfaatkan data dari MyDramaList.
 
 ### Solution statements
-- Melakukan proses *Exploratory Data Analysis* untuk mengetahui fitur yang paling mempengaruhi revenue dar pengunjung e-commerce.
-- Menggunakan model *Machine Learning* untuk memprediksi revenue dari pengunjung e-commerce, menggunakan Deep Learning yaitu Artificial Neural Network.
+Proyek ini akan menciptakan sistem rekomendasi K-Drama berbasis Content-based Filtering, yang menggunakan data dari MyDramaList yang mencakup 250 judul K-Drama teratas. Sistem ini akan menganalisis fitur-fitur kunci dari K-Drama yang telah ditonton oleh pengguna, untuk menghasilkan rekomendasi yang personal dan relevan. Dengan cara ini, pengguna akan lebih mudah menemukan K-Drama yang sesuai dengan preferensi mereka, meskipun mereka adalah pengguna baru atau ketika ada judul baru yang ditambahkan.
+
 ## Data Understanding 
 Dataset yang digunakan yaitu  [Top 250 Korean Dramas (KDrama) Dataset](https://www.kaggle.com/datasets/ahbab911/top-250-korean-dramas-kdrama-dataset) berisi csv data top 250 kdrama di website [MyDramaList](https://mydramalist.com)
 Dataset ini bertujuan untuk memberikan rekomendasi k-drama yang sesuai baik Content Based Recommender System maupun Collaborative Filtering.
@@ -312,7 +316,7 @@ Berdasarkan ROC AUC Curve dimana semakin mendekati nilai 1, maka model semakin b
 
 ## Referensi
 
-1. [Dicoding](https://www.dicoding.com/academies/319/tutorials/16989) (2021). *Studi Kasus Pertama Predictive Analysis Machine learning Terapan*
+1. [Dicoding](https://www.dicoding.com/academies/319/tutorials/17116) (2024). *Content Based Filtering*
 2. [AWS Amazon](https://aws.amazon.com/id/what-is/deep-learning/#:~:text=Deep%20learning%20adalah%20metode%20dalam%20kecerdasan%20buatan%20(AI)%20yang%20mengajarkan). *Apa itu Deep Learning*
 3. [Badan Pusat Statistika Indonesia](https://web-api.bps.go.id/download.php?f=5g3vWbrA+R3h1GRyjNFOdHcxNW1QNmZVS1BvK0hRdEQ3VjRLT1NZYVFOa25qb1hscXBlbWxzU3prSzJWNUpXeGJwMHY1L3lNY1V5QXZmOW11TlBSQUlhVEFjNFNScjh2aS9xL1NEZVpvRlhiV3RNT2JPU3VCQnpndkEvYmlZdHpHaGNKV0N4enNYaEpaTHB2cDdqVE13a0pYVmdETmVFeVZFN0pBU2ZNUTQwRU1UQS81MkhwMXBYd2l0dFhYS2JzY2Frd1RjNU1LYkJRZGVtQWkzcW1lR041SnVwVU02a2VCNlBwbmwyWGFmMXJhbHZpbzF5U08wdEJPWHdMMjNvY0lRdy9IOHhPeXhYalJlRmc=&_gl=1*1xp0dwg*_ga*MjAzMjcyMjU2Ni4xNjk1MzA3OTIx*_ga_XXTTVXWHDB*MTcyNzI0OTAxOS4xOC4xLjE3MjcyNTAyNzkuMC4wLjA) . *Statistik E-Commerce 2022/2023)*
 4. [BINUS](https://sis.binus.ac.id/2022/01/21/decision-tree-algoritma-beserta-contohnya-pada-data-mining/#:~:text=Sebuah%20node%20keputusan%20(misalnya,%20Cuaca/%20Outlook)%20memiliki%20dua%20atau%20lebih) *DECISION TREE ALGORITMA BESERTA CONTOHNYA PADA DATA MINING*
