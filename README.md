@@ -3,9 +3,13 @@
 ## Project Overview
 
 K-Drama (Korean Drama) telah menjadi salah satu bentuk hiburan yang paling populer di seluruh dunia, dengan basis penggemar yang terus berkembang pesat. Popularitas K-Drama tidak hanya terbatas di Korea Selatan, tetapi juga menyebar ke berbagai negara, terutama di Asia, Eropa, dan Amerika. Menurut laporan dari Statista, jumlah pemirsa K-Drama global diperkirakan mencapai lebih dari 50 juta orang, menunjukkan peningkatan signifikan dalam permintaan akan konten K-Drama.
+
 Seiring dengan bertambahnya jumlah judul K-Drama yang tersedia, penonton sering kali mengalami kesulitan dalam menemukan judul baru yang sesuai dengan selera mereka. Sebuah studi oleh Yoon et al. (2021) menunjukkan bahwa sistem rekomendasi dapat meningkatkan kepuasan pengguna dengan memberikan saran konten yang relevan berdasarkan preferensi individu. Dalam konteks K-Drama, rekomendasi yang akurat dapat membantu penonton mengeksplorasi judul yang mungkin mereka nikmati tetapi tidak mereka ketahui.
+
 Dalam pengembangan sistem rekomendasi K-Drama ini, terdapat dua pendekatan utama yang dapat dipertimbangkan: Content-based Filtering dan Collaborative Filtering. Content-based Filtering merekomendasikan K-Drama kepada pengguna berdasarkan fitur-fitur spesifik dari judul yang telah mereka tonton sebelumnya, seperti genre, aktor, dan sinopsis. Pendekatan ini memungkinkan sistem untuk memberikan rekomendasi yang personal dan relevan, meskipun masih memiliki tantangan seperti kesulitan dalam merekomendasikan judul baru.
+
 Di sisi lain, Collaborative Filtering merekomendasikan K-Drama berdasarkan perilaku dan preferensi pengguna lain yang memiliki kesamaan. Meskipun pendekatan ini dapat menawarkan variasi yang lebih besar dalam rekomendasi, ia juga menghadapi masalah seperti cold start, di mana sistem memerlukan data pengguna yang cukup untuk memberikan saran yang akurat. Oleh karena itu, pendekatan Content-based Filtering dipilih untuk proyek ini, terutama mengingat keterbatasan dataset yang digunakan, yang mencakup 250 sampel dari K-Drama teratas di MyDramaList.
+
 Dengan memanfaatkan data dari MyDramaList, proyek ini bertujuan untuk mengembangkan sistem rekomendasi K-Drama yang dapat menyajikan saran judul berdasarkan fitur-fitur penting, sehingga meningkatkan pengalaman menonton pengguna.
 
 
@@ -25,6 +29,7 @@ Proyek ini akan menciptakan sistem rekomendasi K-Drama berbasis Content-based Fi
 ## Data Understanding 
 Dataset yang digunakan yaitu  [Top 250 Korean Dramas (KDrama) Dataset](https://www.kaggle.com/datasets/ahbab911/top-250-korean-dramas-kdrama-dataset) berisi csv data top 250 kdrama di website [MyDramaList](https://mydramalist.com)
 Dataset ini bertujuan untuk memberikan rekomendasi k-drama yang sesuai baik Content Based Recommender System maupun Collaborative Filtering.
+
 Dataset ini terdiri dari 1 file csv, 17 fitur dan 250 sampel judul k-drama.
 
 ### Informasi data:
@@ -140,6 +145,7 @@ Disini digunakan data Genre Karena penonton biasanya cenderung menyukai konten K
 ![image](https://github.com/user-attachments/assets/15cdcbbb-e7b5-491a-9198-9221ac427ef8)
 
 Terlihat beberapa Genre yang ada dalam dataset.
+
 Disini dilakukan fit lalu ditransformasikan ke bentuk matrix.
 matriks yang di miliki berukuran (242, 30). Nilai 242 merupakan ukuran data dan 30 merupakan matrik kategori Genre.
 selanjutnya vektor tf-idf dalam bentuk matriks.
