@@ -58,43 +58,53 @@ Pada Dataset tersebut berisikan informasi sebanyak 250 judul k-drama dengan 17 f
 
 ## Analisis Univariat dan Visualisasi Data
 ### Analisis Univariat Tahun Rilis
+
 ![image](https://github.com/user-attachments/assets/3af239c1-0e25-4577-8735-7e50e161a32a)
 Pada Dataset ini paling banyak K-Drama yang rilis tahun 2021.
 
 ### Analisis Univariat Saluran Penyiaran K-Drama
+
 ![image](https://github.com/user-attachments/assets/3e6c72e8-e6c4-463c-a0ae-5e1db2824e14)
 Terlihat pada dataset ini, k-darama yang ada terbanyak dari saluran tvN.
 
 ### Analisis Univariat Hari penyiaran K-Drama
+
 ![image](https://github.com/user-attachments/assets/68776329-d94e-4f56-8995-bdbcd83e5cf9)
 Terlihat pada dataset ini, k-drama yang ada terbanyak di siarkan pada Wednesday, Thursday.
 
 ### Analisis Univariat Jumlah Episode K-Drama
+
 ![image](https://github.com/user-attachments/assets/94c42bcb-8874-4e94-8b98-5d80e1b959ca)
 Rentang episode 10-30 mendominasi kebanyakan k-darama dalam dataset ini.
 
 ###  Analisis Univariat Waktu Durasi Tayang K-Drama per episode
+
 ![image](https://github.com/user-attachments/assets/fe421fbc-64de-45a1-b044-f1e59c7954ce)
 Kebanyakan K-Drama dalam dataset ini berdurasi 60 - 70 menit.
 
 ### Analisis Univariat kategori Content Rating usia
+
 ![image](https://github.com/user-attachments/assets/a05a0bf4-cef9-4363-ac52-424289d04da7)
 Kebanayakan K-Drama dataset ini diperuntukkan untuk penonton dengan usia 15 tahun ke atas.
 
 ### Analisis Univariat Rating K-Drama
+
 ![image](https://github.com/user-attachments/assets/42e92657-ceab-466f-83ce-7c5aaa6b5629)
 Kebanykana K-Drama dalam dataset ini memiliki rating 8,3 - 8,4.
 
 ## Analisis Multivariat dan Visualisasi Data
 ### Analsis Multivariat Rating dengan Jumlah Episode
+
 ![image](https://github.com/user-attachments/assets/5e694a23-7a3f-4635-99e4-35a348ad2ae6)
 K-Drama dengan Rating Tinggi kebanyakan rentang episodenya antara 0 - 40.
 
 ### Analsis Multivariat Rating, Content Rating dengan Jumlah Episode
+
 ![image](https://github.com/user-attachments/assets/624263cb-6a9f-4e47-8373-de81ddce97b1)
 Tidak terlalu berpengaruh anatara Rating, Content Rating dengan Jumlah Episode.
 
 ### Analsis Multivariat Rating dengan Genre
+
 ![image](https://github.com/user-attachments/assets/1326730b-fce8-4274-8b87-88ea382dbb6a)
 Rating Tinggi K-Drama didominasi Genre Drama, Romance, dan Thriller.
   
@@ -242,9 +252,11 @@ Precision@K mengukur ketepatan model dalam merekomendasikan item yang relevan di
 Precision@K merupakan rasio dari jumlah item relevan yang ditemukan dalam K rekomendasi teratas, dibagi dengan K. Dengan kata lain, Precision@K menunjukkan persentase rekomendasi yang relevan di antara K rekomendasi teratas.
 
 Rumus
+
 ![image](https://github.com/user-attachments/assets/2f8628d5-5bec-4d34-b9f0-39acd18235ad)
 
-Hail Evaluasi Precisision@5
+Hasil Evaluasi Precisision@5
+
 ![image](https://github.com/user-attachments/assets/181e5156-14fb-4c19-9157-58a83c449ce4)
 Nilai 1.0 berarti bahwa semua K item (rekomendasi K-Drama) teratas adalah relevan.
 
@@ -254,11 +266,13 @@ Mean Reciprocal Rank (MRR) menilai seberapa cepat item relevan pertama muncul da
 Reciprocal Rank adalah kebalikan dari posisi item relevan pertama dalam daftar rekomendasi. MRR adalah rata-rata dari Reciprocal Rank untuk semua query atau pengguna
 
 Rumus
+
 ![image](https://github.com/user-attachments/assets/a3826045-46b6-46c0-b5f6-feaba007de57)
 
 Di mana rank_𝑖 adalah posisi item relevan pertama untuk query ke-𝑖 i, dan 𝑁 adalah jumlah query.
 
 Hasil Evaluasi MRR
+
 ![image](https://github.com/user-attachments/assets/68d3d309-d008-47f2-a9fb-85ed601ee2ff)
 Nilai 1.0 berarti item relevan (Rekomendasi K-Drama) pertama selalu ada di posisi teratas.
 
@@ -266,14 +280,17 @@ Semakin tinggi nilai MRR, semakin cepat item relevan ditemukan di dalam daftar r
 
 ### Mean Average Precision (MAP)
 Mean Average Precision (MAP) mengukur akurasi rata-rata dari semua posisi relevan dalam daftar rekomendasi dan kemudian menghitung rata-ratanya untuk semua query atau pengguna. Dimana Untuk setiap query atau pengguna, kita menghitung Average Precision (AP), yang merupakan rata-rata Precision pada setiap posisi di mana item relevan muncul. MAP adalah rata-rata dari AP untuk seluruh query.
+
 ![image](https://github.com/user-attachments/assets/904657db-bd3c-4ccc-88f2-cda7df66b51f)
 Di mana AP𝑖 adalah Average Precision untuk query ke-𝑖, dan 𝑁 adalah jumlah query.
 
 Untuk menghitung AP, kita menggunakan
+
 ![image](https://github.com/user-attachments/assets/a2e55285-8d8a-47da-82bd-e60b8bb61b0b)
 Di mana 𝑛 adalah jumlah item yang direkomendasikan, dan relevance (𝑘) adalah 1 jika item pada posisi 𝑘 relevan, dan 0 jika tidak relevan.
 
-Hail Evaluasi
+Haisl Evaluasi
+
 ![image](https://github.com/user-attachments/assets/4e884f14-069b-4e2a-8710-66839e2868d5)
 Nilai 1.0 menunjukkan bahwa semua item relevan berada di posisi paling atas dan semuanya relevan.
 
