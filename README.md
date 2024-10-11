@@ -111,6 +111,7 @@ Rating Tinggi K-Drama didominasi Genre Drama, Romance, dan Thriller.
 ## Data Preparation
 ### Mengatasi Missing Values
 Semua fitur dalam dataset ini tidak memiliki missing value, dengan rincian sebagai berikut:
+
 ![missing value](https://github.com/user-attachments/assets/18fc5015-68c8-4737-aacb-3f9f3193a9a3)
 
 | Name                      | Aired Date                   | Year of Release | Original Network | Aired On         | Number of Episodes | Duration    | Content Rating       | Rating | Synopsis                                                                                         | Genre                              | Tags                                         | Director        | Screenwriter              | Cast                                                | Production Companies | Rank |
@@ -130,6 +131,7 @@ Sekarang tidak ada missing value lagi, data yang semula memiliki 250 data judul 
 
 
 ### Mengatasi Data Duplicate
+
 ![duplikat](https://github.com/user-attachments/assets/c8597427-70d5-4fe0-97ea-eeeec075820f)
 Pada dataset ini tidak ada data duplikat.
 
