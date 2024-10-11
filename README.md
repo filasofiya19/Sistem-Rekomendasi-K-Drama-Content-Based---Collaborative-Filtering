@@ -212,7 +212,7 @@ def kdrama_recommendations(Name, similarity_data=cosine_sim_df, items=data[['Nam
     closest = closest.drop(Name, errors='ignore')
 
     return pd.DataFrame(closest).merge(items).head(k)
-```python
+```
 
 Dengan menggunakan argpartition,di ambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, kita mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, kita perlu menghapus nama_resto yang yang dicari agar tidak muncul dalam daftar rekomendasi.
 
